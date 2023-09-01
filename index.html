@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Gross Profit - By Mateus Morais</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./assets/icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1 style="cursor: default;">Calculadora Lucro</h1>
+        
+        <div class="form-group">
+            <label for="km">Kilometragem Rodada:</label>
+            <input type="number" id="km" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="lucro">Lucro no(s) app(s):</label>
+            <input type="number" id="lucro" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="combustivel">Preço do Combustível:</label>
+            <input type="number" id="combustivel" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="consumo">Consumo de Combustível:</label>
+            <p style="font-size: 13px; text-align: center; margin-top: -5px;">(Litros por Km)</p>
+            <input type="number" id="consumo" step="0.01" required>
+        </div>
+        
+        
+        <button type="button" onclick="calcularLucro()">Calcular Lucro</button>
+        
+        <div class="result" id="resultado"></div>
+        
+        <div id="frases"></div>
+        
+        <footer>
+            Feito com ❤️ por <a href="https://github.com/mateusmoraiss" target="_blank" rel="noopener noreferrer">Mateus</a>
+        </footer>
+        
+    </div>
+    
+    <script>
+        function calcularLucro() {
+            var km = parseFloat(document.getElementById('km').value);
+            var lucro = parseFloat(document.getElementById('lucro').value);
+            var precoCombustivel = parseFloat(document.getElementById('combustivel').value);
+            var consumo = parseFloat(document.getElementById('consumo').value);
+            
+            var gastoCombustivel = km / consumo * precoCombustivel; // Calcula o gasto com combustível
+            var lucroBruto = lucro - gastoCombustivel; // Calcula o lucro bruto
+            
+            document.getElementById('resultado').innerHTML = 'Lucro Bruto Estimado: R$ ' + lucroBruto.toFixed(2);
+        }
+
+
+        const frases = [
+            "Oi",
+            "Tudo bem?",
+            "Espero que sim! ",
+            "Deixa eu te contar uma coisa...",
+            "Podem não ter visto o seu esforço hoje,",
+            "mas você tem um pai lá no céu...",
+            "Ele viu tudo que você fez...",
+            "sabe das suas lutas,",
+            "das corridas de 5,67 R$... (HUAHUAHUA),",
+            "das corridas com 4 passageiros e 1 cachorro,",
+            "das corridas com as caloteiras do 'deixa pra pagar na próxima'...",
+            "das corridas pra mercado com 80 sacolas,",      
+            "Ele vê tudo isso, pode ter certeza!",
+            "Lá na frente VAI VALER A PENA",
+            "Você foi incrível hoje, obrigado por não desistir.",
+            "Bom descanso :) VRUMMMM"
+        ];
+
+        const options = {
+            strings: frases,
+            typeSpeed: 100, // Velocidade da digitação (em milissegundos)
+            backSpeed: 20, // Velocidade de apagar (em milissegundos)
+            backDelay: 1800, // Pausa após apagar (em milissegundos)
+            startDelay: 4500, // Pausa antes de começar a digitar (em milissegundos)
+            loop: false, // Repetir o efeito
+            showCursor: false // Ocultar cursor de digitação
+        };
+
+        const typed = new Typed("#frases", options);
+    </script>
+
+</body>
+</html>
