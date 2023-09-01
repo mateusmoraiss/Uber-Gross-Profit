@@ -9,8 +9,8 @@ Bem-vindo ao projeto de cálculo de lucros para motoristas de aplicativos de tra
 
 2. **Estrutura de Diretórios:** O projeto contém:
    - `index.html`: Página principal.
-   - `styles.css`: Estilos.
-   - `script.js`: Código JavaScript.
+   - `styles.css`: Estilos. (Na pasta assets)
+   - `script.js`: Código JavaScript. (Está no próprio HTML)
  
 3. **Preencha os Dados:** Abra `index.html` em um navegador e insira:
    - Quilometragem rodada.
