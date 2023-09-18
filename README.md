@@ -1,6 +1,6 @@
 # Projeto de Cálculo de Lucros para Motorista de App (Uber)
 
-Bem-vindo ao projeto de cálculo de lucros para motoristas de aplicativos de transporte. Este é um mini site em HTML e JavaScript que calcula o lucro bruto diário com base em dados como quilometragem rodada, lucro nos apps, preço do combustível e consumo do veículo.
+Bem-vindo ao projeto de cálculo de lucros para motoristas de aplicativos de transporte. Este é um mini site em HTML e JavaScript que calcula o lucro bruto LÍQUIDO diário com base em dados como quilometragem rodada, lucro nos apps, preço do combustível e consumo do veículo.
 
  Teste o [Deploy do projeto aqui.](https://uber-gross-profit.netlify.app)
 ## Instruções
